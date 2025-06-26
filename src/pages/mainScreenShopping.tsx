@@ -3,15 +3,16 @@ import { Button, Box } from '@mui/material';
 
 import SelectCategory from '../components/categoryDropdown ';
 import Categories from '../components/categories';
-import AddProductInput from '../components/AddProductInput';
 
 import orderStore from '../store/cartStore ';
 import type { Product } from '../models/product';
 import Header from './header';
 
 import Swal from 'sweetalert2';
+import AddProductInput from '../components/addProductInput';
 
 export default function ShoppingPage() {
+
   const [product, setProduct] = useState<Product>({
     productName: "",
     categoryId: 0

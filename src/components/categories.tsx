@@ -49,7 +49,7 @@ const Categories = observer(() => {
           fontWeight={600}
           sx={{ color: "#333" }}
         >
-         סל הקניות לפי קטגוריות:
+          סל הקניות לפי קטגוריות:
         </Typography>
       </Stack>
 

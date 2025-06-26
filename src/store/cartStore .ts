@@ -54,19 +54,9 @@ class CartStore {
     }
   }
 
-  // get totalLines() { return this.products.length; }
-
   get totalUnits() {             
     return this.products.reduce((s, p) => s + (p.quantity ?? 1), 0);
   }
-
-  // get unitsByCategory(): Record<number, number> {
-  //   return this.products.reduce((acc, p) => {
-  //     acc[p.categoryId] = (acc[p.categoryId] ?? 0) + (p.quantity ?? 1);
-  //     return acc;
-  //   }, {} as Record<number, number>);
-  // }
-
 
   get productsByCategory(): Record<number, Product[]> {
     return this.products.reduce((acc, p) => {

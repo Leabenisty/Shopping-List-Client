@@ -1,9 +1,6 @@
 import * as React from 'react';
 import { observer } from 'mobx-react-lite';
-import {
-  Table, TableBody, TableCell, TableContainer,
-  TableHead, TableRow, Paper
-} from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import CartStore from '../store/cartStore ';
 
 const OrderSummaryTable: React.FC = observer(() => {

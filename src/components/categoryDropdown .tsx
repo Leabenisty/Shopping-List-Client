@@ -1,4 +1,3 @@
-// SelectCategory.tsx
 import { useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
 import InputLabel from '@mui/material/InputLabel';
@@ -9,12 +8,12 @@ import type { SelectChangeEvent } from '@mui/material/Select';
 import categoryStore from '../store/categoryStore';
 
 interface SelectCategoryProps {
-    
+
     categoryId: number;
     setCategoryId: (id: number) => void;
 }
 
-const CategoryDropdown  = observer(({ categoryId, setCategoryId }: SelectCategoryProps) => {
+const CategoryDropdown = observer(({ categoryId, setCategoryId }: SelectCategoryProps) => {
 
     useEffect(() => {
         categoryStore.loadCategories();
@@ -23,7 +22,7 @@ const CategoryDropdown  = observer(({ categoryId, setCategoryId }: SelectCategor
     const handleChange = (event: SelectChangeEvent) => {
         setCategoryId(Number(event.target.value));
     };
-    
+
     return (
         <FormControl sx={{ m: 1, minWidth: 360 }} size="medium">
             <InputLabel id="select-category-label">בחר קטגוריה</InputLabel>
@@ -35,13 +34,13 @@ const CategoryDropdown  = observer(({ categoryId, setCategoryId }: SelectCategor
                 onChange={handleChange}
                 MenuProps={{
                     PaperProps: {
-                      style: {
-                        direction: 'rtl',
-                        textAlign: 'right',
-                      },
+                        style: {
+                            direction: 'rtl',
+                            textAlign: 'right',
+                        },
                     },
-                  }}
-                  sx={{ textAlign: 'right' }}
+                }}
+                sx={{ textAlign: 'right' }}
             >
                 {categoryStore.categories.map((cat) => (
                     <MenuItem key={cat.id} value={cat.id}>
@@ -53,4 +52,4 @@ const CategoryDropdown  = observer(({ categoryId, setCategoryId }: SelectCategor
     );
 });
 
-export default CategoryDropdown ;
+export default CategoryDropdown;
