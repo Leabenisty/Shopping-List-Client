@@ -1,13 +1,12 @@
 # 🛒 Shopping List App – Client  
 *React + TypeScript + MobX + Material-UI + Vite*
 
-🔗 [Live App – http://shopping-list.ddns.net](http://shopping-list.ddns.net)
-
 ---
 
 ## 📌 Overview
 
-This is the **client-side** of the Shopping List application, developed using **React** and **TypeScript**, with state management by **MobX** and UI styling through **Material-UI (MUI)**.  
+This is the **client-side** of the Shopping List application, developed using **React** and **TypeScript**, with state management by **MobX** 
+and UI styling through **Material-UI (MUI)**.  
 The app allows users to add products by name and category, view them in a categorized list, and submit the shopping cart to the backend server.
 
 ---
@@ -22,11 +21,11 @@ This project has been deployed to the cloud using **AWS** infrastructure:
 
 ## 🧩 Key Features
 
-- ✅ **Modern Stack:** React + TypeScript + Vite + MobX + MUI  
-- ✅ **Responsive Design:** Mobile-friendly using MUI's Grid system  
-- ✅ **Smart Cart:** Automatically increases product quantity if already exists  
-- ✅ **Categorized List:** Products are grouped by category  
-- ✅ **Live API Integration:** Communicates with backend server in real time
+-  **Modern Stack:** React + TypeScript + Vite + MobX + MUI  
+-  **Responsive Design:** Mobile-friendly using MUI's Grid system  
+-  **Smart Cart:** Automatically increases product quantity if already exists  
+-  **Categorized List:** Products are grouped by category  
+-  **Live API Integration:** Communicates with backend server in real time
 
 ---
 
