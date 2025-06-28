@@ -55,19 +55,18 @@ To improve the user experience and prevent invalid submissions, the following cl
 
 
 ## 📂 Project Structure
-
+```bash
 /client
 ├── /src
-│ ├── /api # Axios API functions
-│ ├── /components # UI components (input, select, list, etc.)
-│ ├── /models # TypeScript interfaces
-│ ├── /stores # MobX store (CartStore)
-│ └── App.tsx # Root component
+│   ├── /api # fetch API functions
+│   ├── /components # UI components (input, select, list, etc.)
+│   ├── /models # TypeScript interfaces
+│   ├── /stores # MobX store (CartStore)
+│   └── App.tsx # Root component
 ├── index.html
 ├── package.json
 └── vite.config.ts
-
-
+```
 ---
 
 ## 🚀 Installation & Running the App Locally
