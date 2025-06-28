@@ -1,86 +1,93 @@
+# 🛒 Shopping List App – Client  
+*React + TypeScript + MobX + Material-UI + Vite*
 
-🛒 Client – Shopping List App (React + MobX)
-📌 Overview
-This is the client-side shopping list project, built using React with TypeScript and managed with MobX. It provides a simple, responsive user interface for adding products by name and category, displaying them in a categorized list, and submitting the shopping cart to the backend server.
+🔗 [Live App – http://shopping-list.ddns.net](http://shopping-list.ddns.net)
 
-🧩 Key Features
-✅ React + TypeScript
-Built with React (TypeScript)
+---
 
-UI components styled using Material-UI 
+## 📌 Overview
 
-Clean and maintainable code structure
+This is the **client-side** of the Shopping List application, developed using **React** and **TypeScript**, with state management by **MobX** and UI styling through **Material-UI (MUI)**.  
+The app allows users to add products by name and category, view them in a categorized list, and submit the shopping cart to the backend server.
 
-✅ Responsive Design
-Fully mobile-friendly layout
+---
 
-Responsive Grid system from MUI ensures optimal display on all screen sizes
+## 🌩️ Deployment to the Cloud
 
-✅ State Management with MobX
-Centralized store for managing shopping cart state
+This project has been deployed to the cloud using **AWS** infrastructure:
+- ✅ **DDNS + custom domain** – Makes the app publicly accessible
+- 🟢 **Live at:** [http://shopping-list.ddns.net](http://shopping-list.ddns.net)
 
-Automatically updates quantities if the product already exists
+---
 
-Cart data is kept in memory until submitted
+## 🧩 Key Features
 
-🖼️ Page Functionality
-Free Text Field to add a product name
+- ✅ **Modern Stack:** React + TypeScript + Vite + MobX + MUI  
+- ✅ **Responsive Design:** Mobile-friendly using MUI's Grid system  
+- ✅ **Smart Cart:** Automatically increases product quantity if already exists  
+- ✅ **Categorized List:** Products are grouped by category  
+- ✅ **Live API Integration:** Communicates with backend server in real time
 
-Categories Dropdown to choose a category
+---
 
-On submit, product is added to the relevant category list below
+## 🖼️ Main Functionality
 
-If the product already exists, its quantity increases
+- **Add Products** by name (free text)
+- **Select Category** from dropdown
+- **View Products** grouped by category
+- **Increase Quantity** for existing items
+- **Total Item Count** displayed at the top
+- **Submit Cart** via `POST /api/cart/save`
 
-Total Items Display at the top (e.g., "Total Items: 3")
+## 🛠️ Additional Features
 
-Product List Display categorized at the bottom of the page
+To improve the user experience and prevent invalid submissions, the following client-side validations were added using SweetAlert2:
 
-Submit Button to finalize the order
+- ❌ **Product name is required**  
+  An alert appears if the user tries to add a product without entering a name.
 
-Sends the cart data to the server via API (/api/order/)
+- ❌ **Category must be selected**  
+  An alert appears if the user tries to add a product without choosing a category.
 
-📂 Project Structure
-bash
-Copy
-Edit
+- ❌ **Cannot submit an empty cart**  
+  If the user clicks "Submit Order" without any products, a SweetAlert2 popup notifies them that the cart is empty.
+
+✨ These validations guide the user and ensure complete, valid data is submitted to the backend.
+
+
+## 📂 Project Structure
+
 /client
- ├── /src
- │   ├── /stores         # MobX store (CartStore)
- │   ├── /components     # UI components (ProductInput, CategorySelect, CartList, TotalItems, SubmitButton)
- │   ├── /api            # API calls
- │   ├── /models         # TypeScript interfaces (Product, Category, CartItem)
- │   └── App.tsx         # Root component
- ├── package.json
- └── tsconfig.json
-🔌 API Communication
-GET /api/categories – fetch predefined categories from the server
+├── /src
+│ ├── /api # Axios API functions
+│ ├── /components # UI components (input, select, list, etc.)
+│ ├── /models # TypeScript interfaces
+│ ├── /stores # MobX store (CartStore)
+│ └── App.tsx # Root component
+├── index.html
+├── package.json
+└── vite.config.ts
 
-POST /api/cart/save – submit the shopping cart data to backend
 
-🚀 Installation & Running
-✅ Prerequisites
-Node.js v14+
+---
 
-npm or yarn
+## 🚀 Installation & Running the App Locally
 
-Backend server running on appropriate port
+### ✅ Prerequisites
 
-💻 Setup
-bash
-Copy
-Edit
-# Navigate to client folder
-cd client
+- Node.js v14 or higher
+- npm 
+- Backend server running on the correct port (e.g., `http://localhost:3000`)
 
-# Install dependencies
+### 💻 Local Setup
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Leabenisty/Shopping-List-Client.git
+cd shopping-list-client
+
+# 2. Install dependencies
 npm install
 
-# Run development server
-npm start
-The app runs by default at http://localhost:3000.
-
-📦 Deployment Ready
-Fully responsive for desktop and mobile
-
-Supports environment variables for dynamic backend URL configuration
+# 3. Run the development server
+npm run dev
